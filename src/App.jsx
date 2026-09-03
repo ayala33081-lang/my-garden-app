@@ -125,12 +125,12 @@ const App = () => {
   return (
     <div>
       <Header />
-      <Flower flowerName="שושן צחור" colorPetals="white" colorCentralLeaf="yellow" />
+      <Flower flowerName="שושן צחור"  />
       <Flower flowerName="חמנייה" colorPetals="yellow" colorCentralLeaf="brown" />
       <Flower flowerName="שושנה" colorPetals="pink" colorCentralLeaf="yellow" />
-      <Flower flowerName="חבצלת" colorPetals="purple" colorCentralLeaf="orange" />
+      <Flower flowerName="חבצלת" colorPetals="purple"  />
       <Flower flowerName="דפנה" colorPetals="blue" colorCentralLeaf="white" />
-      <Flower flowerName="רקפת" colorPetals="red" colorCentralLeaf="green" />
+      <Flower flowerName="רקפת"  colorCentralLeaf="green" />
     </div>
   );
 }
