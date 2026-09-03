@@ -1,8 +1,4 @@
-export const Flower = () => {
-  const flowerName = 'רותם';
-  const colorPetals = 'red';
-  const colorCentralLeaf = 'green';
-
+export const Flower = ({ flowerName = 'רותם', colorPetals = 'red', colorCentralLeaf = 'green' }) => {
   return (
     <div style={{ backgroundColor: colorPetals, padding: '20px', borderRadius: '10px' }}
         onClick={() => alert(`אני פרח מסוג ${flowerName}`)}
