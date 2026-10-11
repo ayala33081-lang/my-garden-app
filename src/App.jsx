@@ -122,15 +122,24 @@ import {Flower} from './Flower/Flower.jsx'
 //   // )
 // }
 const App = () => {
+  const flowers = [{id: 1, flowerName: "שושן צחור", colorPetals: "white", colorCentralLeaf: "yellow"},
+  {id: 2, flowerName: "חמנייה", colorPetals: "yellow", colorCentralLeaf: "brown"},
+  {id: 3, flowerName: "שושנה", colorPetals: "pink", colorCentralLeaf: "yellow"},
+  {id: 4, flowerName: "חבצלת", colorPetals: "purple", colorCentralLeaf: "green"},
+  {id: 5, flowerName: "דפנה", colorPetals: "blue", colorCentralLeaf: "white"},
+  {id: 6, flowerName: "רקפת", colorPetals: "red", colorCentralLeaf: "green"}];
   return (
     <div>
       <Header />
-      <Flower flowerName="שושן צחור"  />
+      {flowers.map((flower) => (
+        <Flower key={flower.id} flowerName={flower.flowerName} colorPetals={flower.colorPetals} colorCentralLeaf={flower.colorCentralLeaf} />
+      ))}
+       {/* <Flower flowerName="שושן צחור"  />
       <Flower flowerName="חמנייה" colorPetals="yellow" colorCentralLeaf="brown" />
       <Flower flowerName="שושנה" colorPetals="pink" colorCentralLeaf="yellow" />
       <Flower flowerName="חבצלת" colorPetals="purple"  />
       <Flower flowerName="דפנה" colorPetals="blue" colorCentralLeaf="white" />
-      <Flower flowerName="רקפת"  colorCentralLeaf="green" />
+      <Flower flowerName="רקפת"  colorCentralLeaf="green" />  */}
     </div>
   );
 }
