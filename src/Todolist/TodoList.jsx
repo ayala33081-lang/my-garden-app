@@ -7,20 +7,20 @@ export const TodoList = () => {
   const [newTask, setNewTask] = useState("");
   const addTask = () => {
   if (newTask.trim() === "") return;
+  if (todos.includes(newTask.trim())) return;
   setTodos([...todos, newTask]);
   setNewTask("");
 };
   return (
     <> 
-        <form onSubmit={(e) => { e.preventDefault(); addTask(); }}>
-      <input
-        type="text"
-        placeholder="הכנס משימה חדשה"
-        value={newTask}
-        onChange={(e) => setNewTask(e.target.value)}
-      />
-      <button type="submit">אישור</button>
-</form> 
+      <form onSubmit={(e) => { e.preventDefault(); addTask(); }}>
+        <input
+          type="text"
+          placeholder="הכנס משימה חדשה"
+          value={newTask}
+          onChange={(e) => setNewTask(e.target.value)}/>
+        <button type="submit">אישור</button>
+      </form> 
 
     <ul>
       {todos.map((todo) => (
